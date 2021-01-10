@@ -139,28 +139,3 @@ dane2[1000] = strtok(dane[1000]; ":");
 return 0;
 }
 
-
-
-/*
-lokalizacja to x,y
-
-jesli info to szukaj 
-czy jest grass i przypisz grass do x,y
-czy sand i przypisz sand do x,y
-
-jesli explore
-jesli patrzy w kierunek N
-    to (po kolei w kolejnosci od lewej do prawej) przypisz material do x-1,y+1; x,y+1; x+1,y+1
-jesli patrzy w kierunek W
-    to przypisz mate
-jesli patrzy w kierunek S
-
-jesli patrzy w kierunek E
-
-
-jesli move to szukaj 
-czy jest grass
-czy sand
-czy lokalizacja sie nie zmienila to podaj lokalizaje poprzednia
-
-*/
