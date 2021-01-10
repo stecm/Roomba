@@ -62,29 +62,29 @@ char * make_request(char *url)
 }
 
 int move(char *token) {
-make_request("http://edi.iem.pw.edu.pl:30000/worlds/api/v1/worlds/move/qwerty_30");
+make_request("http://edi.iem.pw.edu.pl:30000/worlds/api/v1/worlds/move/qwerty_17");
 return 0;
 }
 int left(char *token) {
-make_request("http://edi.iem.pw.edu.pl:30000/worlds/api/v1/worlds/rotate/qwerty_30/left");
+make_request("http://edi.iem.pw.edu.pl:30000/worlds/api/v1/worlds/rotate/qwerty_17/left");
 return 0;
 }
 int right(char *token) {
-make_request("http://edi.iem.pw.edu.pl:30000/worlds/api/v1/worlds/rotate/qwerty_30/right");
+make_request("http://edi.iem.pw.edu.pl:30000/worlds/api/v1/worlds/rotate/qwerty_17/right");
 return 0;
 }
 int explore(char *token) {
-make_request("http://edi.iem.pw.edu.pl:30000/worlds/api/v1/worlds/explore/qwerty_30");
+make_request("http://edi.iem.pw.edu.pl:30000/worlds/api/v1/worlds/explore/qwerty_17");
 printf("\n");
 return 0;
 }
 int info(char *token) {
-make_request("http://edi.iem.pw.edu.pl:30000/worlds/api/v1/worlds/info/qwerty_30");
+make_request("http://edi.iem.pw.edu.pl:30000/worlds/api/v1/worlds/info/qwerty_17");
 return 0;
 }
 int main(int argc, char **argv)
 {
-    char *token="qwerty_30";
+    char *token="qwerty_17";
 
     for(int i=1; i<argc;i++)
     {
