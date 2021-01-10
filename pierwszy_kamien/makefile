@@ -1,13 +1,18 @@
-
-all:
-	cc main.c moves.c -o out -lcurl cJSON/cJSON.o  
-
-test:
-	./out qwerty_17 info explore move rotate right  
-
-reset:
-	./out qwerty_17 reset
+DEPS=main.o moves.o communication.o map.o
 
 
-memory:
-	valgrind ./out qwerty_17 info explore move rotate right 
+pierwszy_kamien: $(DEPS)
+	cc $(DEPS) -o $@ -Wall --pedantic -lcurl ~cJSON/cJSON.o
+
+%.o:%.c
+	cc -c $^ -o $@
+
+
+clean:
+	rm -f main
+	rm -f *.o
+
+test: main
+	./main rotate left move explore
+
+

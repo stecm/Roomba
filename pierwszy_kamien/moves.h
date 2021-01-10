@@ -1,14 +1,12 @@
-typedef struct _Memory
-{
-    char *response;
-    size_t size;
-} Memory;
+#ifndef _MOVES_H
+#define _MOVES_H
 
-static size_t write_callback(void *data, size_t size, size_t nmemb, void *userp);
-char *make_request(char *url);
-char* info(char *token);
-char* explore(char *token);
-char* move(char *token);
-char* rotate(char *token, char *rotation);
-char* reset(char *token);
-void bot(char *token);
+#include "communication.h"
+
+
+int move(char *token);
+int rotate_left(char *token);
+int rotate_right(char *token);
+int explore(char *token);
+
+#endif
