@@ -6,24 +6,9 @@
 #include "map.h"
 #define N 30
 
-Canvas *stworz(){
-    Canvas *new;
-    new = (Canvas*) malloc(sizeof(Canvas));
-    for(int i=0;i<100;i++){
-        for(int j=0;j<100;j++)
-            new->index[i][j] = '0'; 
-    }
-    
-    return new;
-}
-
-Canvas * dodaj(Canvas *C, Map *M){
-    Canvas *new = C;
-    return new;
-}
 
 
-Map * wczytaj_json(Map *M, const char *const dane){
+Map * read_json(Map *M, const char *const dane){
     Map *new;
     const cJSON *jj = NULL;
     const cJSON *status;
@@ -73,7 +58,7 @@ Map * wczytaj_json(Map *M, const char *const dane){
     return new;
 }
 
-Map_explore *wczytaj_json_explore(Map_explore *M, const char *const dane){
+Map_explore *read_json_explore(Map_explore *M, const char *const dane){
     Map_explore *new = NULL;
     new = (Map_explore*) malloc(sizeof(Map_explore));
     int i =0;
@@ -107,6 +92,8 @@ Map_explore *wczytaj_json_explore(Map_explore *M, const char *const dane){
     return new;
 }
 
+/*
+//tu stworzymy canvas do wyswietlania i zapisywania "type_field"  i współrzednych 
 
 
 void print_map(int map[N][N])
@@ -143,3 +130,4 @@ void save_map(int map[N][N])
 }
 
 
+*/

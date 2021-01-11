@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include "moves.h"
+#include "map.h"
+#include "communication.h"
+
+
 
 int main(int argc, char **argv)
 {   
@@ -10,24 +14,24 @@ int main(int argc, char **argv)
     for(int i = 2; i < argc; i++){
 
         if(strcmp(argv[i], "info") == 0)
-            printf("%s\n", info(token));
+            info(token);
           
         else if(strcmp(argv[i], "explore") == 0)
         {
-            printf("%s\n", explore(token));
+            explore(token);
         }
         else if(strcmp(argv[i], "move") == 0)
         {
-            printf("%s\n", move(token));
+            move(token);
         }
         else if(strcmp(argv[i], "rotate") == 0)
         {
-            printf("%s\n", rotate(token, argv[i+1]));
+            rotate(token, argv[i+1]);
             i++;
         }
         else if(strcmp(argv[i], "reset") == 0)
         {
-            printf("%s\n", reset(token));
+            reset(token);
         }
         else
         {

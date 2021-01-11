@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <curl/curl.h>
-#include "cJSON/cJSON.h"
 #include "moves.h"
-#include "communication.h"
+
 
 
 
